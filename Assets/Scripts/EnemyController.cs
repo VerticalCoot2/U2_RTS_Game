@@ -42,4 +42,24 @@ public class EnemyController : Unit
         }
         if (unit == null) anim.SetFloat("Running", 0);
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.name.Contains("Ally"))
+        {
+            anim.SetBool("Attack", true);
+            StartCoroutine(Attack(other));
+        }
+    }
+
+    public static float delay = 0.5f;
+    IEnumerator Attack(Collider col)
+    {
+        while(col != null && col.GetComponent<EnemyController>().health > 0)
+        {
+            transform.LookAt(col.transform);
+            col.GetComponent<EnemyController>().health -= damage;
+            yield return new WaitForSeconds(delay * 3);
+        }
+    }
 }

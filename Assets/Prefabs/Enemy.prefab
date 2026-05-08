@@ -659,6 +659,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1505566322456118564}
   - component: {fileID: 4079957979019925557}
+  - component: {fileID: 6218225557510070882}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -705,6 +706,22 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &6218225557510070882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5170845710910667727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3d596010a7cb694683e66ecc0ea672e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: Unity
+  health: 100
+  damage: 50
+  speed: 3.5
 --- !u!1 &5285038587863850070
 GameObject:
   m_ObjectHideFlags: 0
